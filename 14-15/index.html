@@ -1,0 +1,120 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+    <style> img{width:400;height:300}</style>
+    <script>
+        function sh()
+        {
+            var head = document.getElementById('text1');
+            var text = document.getElementById('text2');
+
+            var mario = document.getElementById('mario');
+            var shrek = document.getElementById('shrek');
+            var takumi = document.getElementById('takumi');
+            var z1 = document.getElementById('z1');
+            var z2 = document.getElementById('z2');
+            var z3 = document.getElementById('z3');
+            var curs = document.getElementById('curs');
+            var und = document.getElementById('und');
+            var fat = document.getElementById('fat');
+            t1=head.value;
+            t2=text.value;
+            var strh1 = "<h1>"+t1+"</h1><hr><P>";
+            var strh2 = "<h1>"+t2+"</h1><hr><P>";
+
+            if (mario.selected) img = '<IMG src="mario.jpg">';
+            if (shrek.selected) img = '<IMG src="shrek.jpg">';
+            if (takumi.selected) img = '<IMG src="takumi.jpg">';
+
+            if (z1.checked) st="<head><style> body {background-image: url('z1.jpg'); background-size: cover;";
+            if (z2.checked) st="<head><style> body {background-image: url('z2.jpg'); background-size: cover;";
+            if (z3.checked) st="<head><style> body {background-image: url('z3.jpg'); background-size: cover;";
+
+            if (curs.checked) st1=st+"font-style: italic};";
+            if (und.checked) st1=st+"text-decoration: underline};";
+            if (fat.checked) st1=st+"font-weight: bold}; ";
+
+            st2=st1+"</style></head>"
+            
+            var win=window.open("","","width=1000,height=1000");
+            win.document.open();
+
+            win.document.write(st2);  
+            win.document.write(strh1);
+            win.document.write(img);
+            win.document.write(strh2);
+
+            cls ='<input type="button" value="закрыть"' +'onClick="window.close();">';
+            win.document.write(cls);
+
+            win.document.close();
+        }
+
+
+    </script>
+</head>
+
+    <body>
+        <script>
+            function res()
+            {
+                document.getElementById('text1').value = "";
+                document.getElementById('text2').value = "";
+                document.getElementById('z1').checked = false;
+                document.getElementById('z2').checked = false;
+                document.getElementById('z3').checked = false;
+                document.getElementById('mario').false;
+                document.getElementById('shrek').false;
+                document.getElementById('takumi').false;
+                document.getElementById('curs').checked = false;
+                document.getElementById('und').checked = false;
+                document.getElementById('fat').checked = false;
+
+            }
+        </script>
+
+        <h1 id="header1">Страничка по персонажу</h1>
+        <table class="tab">
+            <tr>
+                <td>Персонаж</td>
+                <td colspan="3">
+                    <select id="text1" class="divs">
+                        <option id='mario'>Марио</option>
+                        <option id='shrek'>Шрек</option>
+                        <option id='takumi'>Такуми</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td>Подпись</td>
+                <td colspan="3"><input type="text" id="text2" class="divs"></input></td>
+            </tr>
+            <tr>
+                <td colspan="2">Картинка для фона</td>
+                <td colspan="2">Форматирование текста</td>
+            </tr>
+            <tr>
+                <td><input type="radio" id="z1"></td>  
+                <td>#z1.jpg</td>
+                <td><input type="checkbox" id="curs"></td>  
+                <td>Курсив</td>   
+            </tr>
+            <tr>
+                <td><input type="radio" id="z2"></td>
+                <td>#z2.jpg</td>
+                <td><input type="checkbox" id="und"></td>
+                <td>Подчеркивание</td>
+            </tr>
+            <tr>
+                <td><input type="radio" id="z3"></td>
+                <td>#z3.jpg</td>
+                <td><input type="checkbox" id="fat"></td>
+                <td>Жирный</td>
+            </tr>
+            <tr>
+                
+                <td colspan="2"><input type="reset" id="reset" value="Сброс" onClick="res()"></td>
+                <td colspan="2"><input type="button" id="show" value="Показать" onClick="sh()" ></td>
+            </tr>
+		</table>
+
+    </body>
+    
