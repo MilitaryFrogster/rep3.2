@@ -18,14 +18,10 @@
 
             h1= t1+" и "+t2;
             var strh1 = "<h1>"+h1+"</h1><hr><P>";
-            var strh2 = "<div>  -Проклятье, "+t2+"! Как будущий "+t4+", я приказываю очистить этот город от солдат  "+t3+"!</div>";
-            var strh3 = "<div>  -Ты еще не "+t4+", юноша, но этот приказ я не выполнил бы, будь ты хоть трижды "+t5+"!</div>";
-            var strh4 = "<div>  -Что ж... Тогда я должен расценивать это, как измену...</div>";
-            var strh5 = "<div>  -Измену?! "+t1+", ты совсем лишился рассудка?!</div>";
-            var strh6 = "<div>  -Да? Лорд "+t2+", властью данной мне, по праву рождения я отстраняю тебя от службы, и освобождаю твоих рыцарей!</div>";
-            var strh7 = "<div>  -"+t1+", ты же не можешь просто...</div>";
-            var strh8 = "<div>  -Это уже сделано! Теперь, те кто действительно хочет спасти эту землю - оставайтесь. Остальные - убирайтесь с глаз!!!</div><hr><P>";
-                
+            var strh2 = "<div>  Здравствуй, дорогой, "+t1+"! Я знаю, что ты весь год вел себя хорошо и старательно"+t2+", и знаю, что ты очень хотел получить на новый год  "+t3+"!</div>";
+            var strh3 = "<div>  В новом году я желаю тебе больше "+t4+",и почаще "+t5+"!</div>";
+            var strh4 = "<div>  Ну что ж "+t1+", а на этом нам пора прощаться, до встречи через год и с праздником! </div>";
+                   
                 
             // </div><hr><P>";
             
@@ -36,10 +32,6 @@
             win.document.write(strh2);
             win.document.write(strh3);
             win.document.write(strh4);
-            win.document.write(strh5);
-            win.document.write(strh6);
-            win.document.write(strh7);
-            win.document.write(strh8);
 
             cls ='<input type="button" value="закрыть"' +'onClick="window.close();">';
             win.document.write(cls);
@@ -53,27 +45,27 @@
 
     <body>
 
-        <h1 id="header1">Генератор очищения Стратхольма</h1>
+        <h1 id="header1">Генератор поздравления на Новый год</h1>
         <hr>
         <table class="tab">
             <tr>
-                <td>Имя героя:</td>
+                <td>Кого поздравляем?:</td>
                 <td><input type="text" id="text1" class="divs"></input></td>
             </tr>
             <tr>
-                <td>Друг героя:</td>
+                <td>Что делал в течение года?(глагол):</td>
                 <td><input type="text" id="text2" class="divs"></input></td>
             </tr>
             <tr>
-                <td>Враг героев (Родительный падеж):</td>
+                <td>Подарок:</td>
                 <td><input type="text" id="text3" class="divs"></input></td>
             </tr>
             <tr>
-                <td>Кем хочет быть герой:</td>
+                <td>Пожелание 1:</td>
                 <td><input type="text" id="text4" class="divs"></input></td>
             </tr>
             <tr>
-                <td>Творительный падеж пред. пункта:</td>
+                <td>Пожелание 2:</td>
                 <td><input type="text" id="text5" class="divs"></input></td>
             </tr>
             <tr>
